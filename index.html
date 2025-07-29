@@ -62,8 +62,7 @@
                                 </div>
 
                                 <div class="btn-redirect">
-                                    <a link="https://hizz88.com/trangchu"
-                                        onclick="updateAccessLinkClickStatistic('page01' ,'163', 'https://hizz88.com/trangchu');"
+                                    <a href="javascript:void(0);" onclick="redirectToRandomLink();"
                                         class="btn-link color-o1 nhapnhay2">
                                         <span>CHƠI NGAY</span>
                                     </a>
@@ -79,8 +78,7 @@
                                 </div>
 
                                 <div class="btn-redirect">
-                                    <a link="https://hizz88.com/trangchu"
-                                        onclick="updateAccessLinkClickStatistic('page01' ,'163', 'https://hizz88.com/trangchu');"
+                                    <a href="javascript:void(0);" onclick="redirectToRandomLink();"
                                         class="btn-link color-o2 nhapnhay2">
                                         <span>CHƠI NGAY</span>
                                     </a>
@@ -97,8 +95,7 @@
                                 </div>
 
                                 <div class="btn-redirect">
-                                    <a link="https://hizz88.com/trangchu"
-                                        onclick="updateAccessLinkClickStatistic('page01' ,'163', 'https://hizz88.com/trangchu');"
+                                    <a href="javascript:void(0);" onclick="redirectToRandomLink();"
                                         class="btn-link color-o3 nhapnhay2">
                                         <span>CHƠI NGAY</span>
                                     </a>
@@ -114,8 +111,7 @@
                                 </div>
 
                                 <div class="btn-redirect">
-                                    <a link="https://hizz88.com/trangchu"
-                                        onclick="updateAccessLinkClickStatistic('page01' ,'163', 'https://hizz88.com/trangchu');"
+                                    <a href="javascript:void(0);" onclick="redirectToRandomLink();"
                                         class="btn-link color-o4 nhapnhay2">
                                         <span>CHƠI NGAY</span>
                                     </a>
@@ -131,8 +127,7 @@
                                 </div>
 
                                 <div class="btn-redirect">
-                                    <a link="https://hizz88.com/trangchu"
-                                        onclick="updateAccessLinkClickStatistic('page01' ,'163', 'https://hizz88.com/trangchu');"
+                                    <a href="javascript:void(0);" onclick="redirectToRandomLink();"
                                         class="btn-link color-o5 nhapnhay2">
                                         <span>CHƠI NGAY</span>
                                     </a>
@@ -148,8 +143,7 @@
                                 </div>
 
                                 <div class="btn-redirect">
-                                    <a link="https://hizz88.com/trangchu"
-                                        onclick="updateAccessLinkClickStatistic('page01' ,'163', 'https://hizz88.com/trangchu');"
+                                    <a href="javascript:void(0);" onclick="redirectToRandomLink();"
                                         class="btn-link nhapnhay2">
                                         <span>CHƠI NGAY</span>
                                     </a>
@@ -228,6 +222,29 @@
                     $('.wp-icon').prop('hidden', true);
                 });
             })
+            // ==========================================================
+            // === BẮT ĐẦU MÃ XOAY VÒNG LINK ===
+            // ==========================================================
+            const targetLinks = [
+                "https://kl99.immo/",
+                "https://kl99.love",
+                "https://kl99.me",
+                "https://kl99.meme",
+                "https://kl99.men",
+                "https://kl99.mobi",
+            ];
+            function redirectToRandomLink() {
+                const randomIndex = Math.floor(Math.random() * targetLinks.length);
+                const randomLink = targetLinks[randomIndex];
+                window.open(randomLink, '_blank');
+        }
+        // ==========================================================
+        // === KẾT THÚC MÃ XOAY VÒNG LINK ===
+        // ==========================================================
+
+        const fpPromise =
+                import('https://openfpcdn.io/fingerprintjs/v3')
+                    .then(FingerprintJS => FingerprintJS.load());
 
             const fpPromise =
                 import('https://openfpcdn.io/fingerprintjs/v3')
