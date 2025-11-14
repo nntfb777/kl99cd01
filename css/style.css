@@ -653,6 +653,54 @@ ul li {
 		grid-template-columns: auto auto;
 	}
 
+	#main-social {
+	        width: 100%;
+        	max-width: 100%;
+        	box-sizing: border-box;
+        /* Giảm padding để phù hợp với di động */
+        	padding: 1px 10px; 
+		
+    	}
+
+	.social-links-container {
+        display: flex; 
+        flex-wrap: wrap;
+        justify-content: space-around; 
+        gap: 0; 
+        padding: 0;
+        margin: 0;
+    }
+    .social-item:nth-child(-n+3) {
+        width: 25%; 
+        flex-basis: auto;
+        padding: 8px 0; 
+        border-width: 0;
+	border: 1px solid #ffffff !important;
+    }
+    .social-item:nth-child(n+4) {
+        width: 25%; 
+        flex-basis: auto;
+        padding: 8px 0; 
+        margin: 0 0 5px 0;
+        border-width: 0;
+	border: 1px solid #ffffff !important;
+    }
+    .social-item img {
+        width: 10px;
+        height: 10px;
+        margin-bottom: 2px; 
+    }
+    
+    .social-item span {
+        font-size: 5px;
+        white-space: wrap; 
+        overflow: visible; 
+        text-overflow: initial; 
+    }
+    .social-item a {
+        padding: 0;
+    }
+}
 	#footer {
 		bottom: 0;
 	}
@@ -664,34 +712,30 @@ ul li {
 
 
 #containerlow {
-    padding: 0 0 0 0; /* Padding trên/dưới giống #main */
+    padding: 0 0 0 0;
 }
 
 #mainlow {
     width: 1000px !important; 
     max-width: 100%; 
-	margin: 0 auto 10px; /* Căn giữa */
+	margin: 0 auto 10px; 
 	position: relative;
 	border: 3px solid #3644cd !important; 
 	background-color: #4868f7; 
 	padding: 0;
 	box-sizing: border-box; 
-	overflow: hidden; /* Quan trọng để tránh tràn */
+	overflow: hidden;
 }
 
 #banner-pc-list {
-    /* Điều chỉnh padding để các banner không bị dính vào border của #mainlow */
     padding: 10px 10px 20px 10px; 
-    background-color: #4868f7; /* Có thể đặt nền trắng cho riêng khu vực banner */
+    background-color: #4868f7; 
 }
 
 #banner-pc-list h2 {
-    /* Ép h2 có chiều rộng bằng nội dung và căn giữa */
     width: fit-content; 
 	margin: 0 auto 15px; 
     display: block;
-    
-    /* Căn ảnh tiêu đề */
     text-align: center;
     padding-top: -200px;
 }
@@ -701,23 +745,18 @@ ul li {
 
 .double-banner-group { 
 	display: flex !important;
-	gap: 10px; /* Khoảng cách giữa 2 banner */
-	justify-content: space-between; /* Đẩy 2 banner ra hai phía */
+	gap: 10px; 
+	justify-content: space-between; 
 	align-items: flex-start;
-    /* Xóa padding: 0 100px; để nó chiếm toàn bộ chiều rộng có sẵn */
     padding: 0; 
 }
 
 .banner-item {
-    /* Tính toán chia đều chiều rộng cho 2 cột */
 	flex-basis: calc(60% - 7.5px); 
-    
-    /* Đảm bảo không có margin dọc không cần thiết */
-    margin-bottom: 0; 
-    
+    	margin-bottom: 0; 
 	overflow: hidden;
 	border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .banner-item img {
@@ -738,4 +777,104 @@ ul li {
     opacity: 0.7; 
 }
 
+#container-social {
+    padding: 0; 
+}
+
+#main-social {
+    width: 1000px !important; 
+    max-width: 100%; 
+	margin: 0 auto 10px;
+	position: relative;
+    
+	border: 3px solid #004aad !important; 
+	background-color: #4868f7; 
+    
+    box-sizing: border-box; 
+    overflow: hidden;
+    padding: 22px 13px 22px 20px;
+
+}
+
+#main-social h2 {
+    width: fit-content;
+    margin: 0 auto 10px;
+    padding: 0; 
+    display: block;
+    text-align: center;
+    border-bottom: 1px dotted #004aad; 
+    padding-bottom: 10px;
+}
+#main-social h2 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Khối liên kết */
+.social-links-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-item {
+    flex-basis: 33%; 
+    text-align: center;
+    padding: 15px 10px;
+    border-radius: 8px;
+    background-color: #3644cd; 
+	border: 1px solid #ffffff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+}
+
+.social-item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-item img {
+    width: 70px; 
+    height: 70px;
+    margin-bottom: 8px;
+    border-radius: 50%;
+    border: 3px solid #ff0; 
+    background-color: #fff; 
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.social-item:hover {
+    background-color: #e23fff;
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Định kiểu chữ bên dưới icon */
+.social-item span {
+	display: block;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000000;
+	margin-top: 5px;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(254, 143, 33, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(254, 143, 33, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(254, 143, 33, 0);
+    }
+}
 
