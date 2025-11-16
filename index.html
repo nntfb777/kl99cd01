@@ -225,12 +225,6 @@
                     </a>
                 </div>
                 
-                <div class="social-item special-link">
-                    <a href="https://kl99code.com/" target="_blank">
-                        <img src="images/index/giftcode-icon.png" alt="Link nhập Code">
-                        <span>Link nhập Code</span>
-                    </a>
-                </div>
 
                 <div class="social-item">
                     <a href="https://t.me/DailyKL99" target="_blank">
@@ -249,6 +243,10 @@
         </div>
     </div>
 </div>
+
+
+
+
 
 		<div id="footer">
 			<div class="fBox">
@@ -299,21 +297,17 @@
             pcUrl: 'https://99kl.online/DownloadApp/',
         },
         mounted() {
-            // Khởi tạo danh sách URL ngẫu nhiên khi trang được tải
             this.urls = this.getRandomUrls(5);
             this.moburls = this.getRandomUrls(5);
 
             this.startPingCheck();
         },
         methods: {
-            // 2. HÀM LẤY NGẪU NHIÊN 5 URL
             getRandomUrls(count) {
-                // Sao chép masterUrls để tránh thay đổi mảng gốc
                 const shuffled = this.masterUrls.slice().sort(() => 0.5 - Math.random());
-                // Chọn 'count' phần tử đầu tiên
                 const selectedUrls = shuffled.slice(0, count);
 
-                // Chuyển đổi thành định dạng đối tượng mà Vue cần
+
                 return selectedUrls.map((url, index) => ({
                     url: url,
                     title: `Link truy cập ${index + 1}`,
@@ -322,7 +316,7 @@
                 }));
             },
             
-            // Hàm bắt đầu kiểm tra Ping (Tách riêng để dùng lại)
+
             startPingCheck() {
                 this.timeHanlde = setInterval(() => {
                     this.tim++
@@ -343,14 +337,14 @@
                 this.tim = 0
                 clearInterval(this.timeHanlde)
                 
-                // CẬP NHẬT: Chọn lại URL ngẫu nhiên khi làm mới
+ 
                 this.urls = this.getRandomUrls(5);
                 this.moburls = this.getRandomUrls(5);
                 
                 this.startPingCheck();
             },
             
-            // ... (Các phương thức khác giữ nguyên hoặc điều chỉnh nhỏ)
+  
             sortOrder(filed, type = 'asc') {
                 return (a, b) => {
                     if (type === 'asc') return a[filed] > b[filed] ? 1 : -1;
@@ -361,7 +355,7 @@
                 this.urls.sort(this.sortOrder('time', 'asc'))
                 this.moburls.sort(this.sortOrder('time', 'asc'))
             },
-            send(url, index, listName) { // Thêm listName để xác định mảng
+            send(url, index, listName) { 
                 const _this = this
                 $.ajax({
                     type: 'get',
@@ -369,8 +363,7 @@
                     dataType: 'jsonp',
                     timeout: 1000,
                     complete: function (res) {
-                        const targetList = _this[listName]; // Chọn mảng urls hoặc moburls
-                        
+                        const targetList = _this[listName];                         
                         if (res.status == 200) {
                             if (_this.tim > 5000) {
                                 targetList[index].second = _this.connectTimeout;
@@ -387,7 +380,7 @@
                     },
                 })
             },
-            // ... (Các phương thức down() và browserDetection() giữ nguyên)
+            
             down() {
                 if (this.browserDetection() == 'PC') {
                     window.location.href = this.pcUrl;

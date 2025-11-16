@@ -72,10 +72,16 @@ ul li {
 		display: block !important;
 	}
 
+	#container-social {
+		/* Hiển thị trên PC */
+		display: block !important;
+	}
+
 	#container2 {
 		/* Ẩn trên PC */
 		display: none !important;
 	}
+
 }
 
 #header {
@@ -375,342 +381,6 @@ ul li {
 	height: auto;
 }
 
-#footer {
-	display: flex;
-    text-align: center;
-    clear: both;
-    background-color: #ffffff;
-    border-top: 4px solid #2c4cdd;
-    bottom: 0;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    align-items: baseline;
-}
-
-
-#footer .fImg {
-	margin-bottom: 0px;
-}
-
-#footer .fImg ul {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border: 1px solid #bc3555;
-	background-color: #8ad0b8;
-}
-
-#footer .fBox {
-	padding: 10px;
-}
-
-#footer .fNavi li {
-	margin: 0 10px;
-	display: inline-block;
-}
-
-#footer .fNavi li a {
-	color: #825c48;
-}
-
-#footer .fNavi li a:hover {
-	color: #ff0;
-}
-
-#footer p {
-	margin-top: 7px;
-	color: #000000;
-	font-size: 18px;
-	line-height: 2.5;
-}
-
-.box-redirect {
-	padding: 0px 13px 0 20px !important;
-}
-
-.link-download-app {
-	padding: 0px;
-	position: relative;
-	overflow: hidden;
-	margin-top: 10px;
-}
-
-.link-download-app .content {
-	position: relative;
-	background-color: #4868f7;
-	padding: 10px;
-	text-align: center;
-	z-index: 2;
-}
-
-.link-download-app,
-.link-download-app .content {
-	border-radius: 10px;
-}
-
-.link-download-app h3 {
-	color: #4868f7;
-	font-size: 16px;
-	white-space: nowrap;
-}
-
-.link-download-app h3:hover {
-	text-shadow: 0 0 2px #ff0;
-}
-
-@keyframes animate {
-	from {
-		background-position: 0;
-	}
-
-	to {
-		background-position: 0 450px;
-	}
-}
-
-.box-btn-redirect {
-	width: 100%;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-}
-
-@media screen and (max-width: 1024px) {
-
-	#main,
-	#header .hBox,
-	#header .hInner,
-	#footer .fBox {
-		max-width: 100%;
-	}
-}
-
-@media screen and (max-width: 1023.98px) {
-
-	html,
-	body {
-		overflow-x: hidden;
-	}
-
-	#container,
-	#container2,
-	#containerlow {
-		width: 100%;
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-
-	
-	#main #sideBar h2,
-	.img-download-app {
-		display: none;
-	}
-
-	#main #conts {
-		width: 100%;
-	}
-
-	#main #conts:before {
-		border: none;
-	}
-
-	#header .logo img {
-		width: 250px;
-	}
-
-	#conts .linkUl li {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin-bottom: 10px;
-	}
-
-	#main #sideBar {
-		width: 100%;
-		padding: 0 0 20px;
-	}
-
-	.link-download-app {
-		margin-top: 0;
-		width: 100%;
-	}
-
-	.link-download-app::before {
-		height: 1125%;
-	}
-
-	#header .hInner h1 {
-		font-size: 20px;
-		padding: 10px;
-		text-align: center;
-	}
-
-	#conts .linkUl li span {
-		padding: 7px;
-		font-size: 24px;
-		width: 50%;
-	}
-
-	#conts .linkUl li a {
-		height: 50px;
-		background-size: cover;
-		font-size: 22px;
-	}
-
-	#conts .linkUl li .txt,
-	#conts .linkUl li a {
-		width: 20%;
-	}
-
-	#footer p {
-		font-size: 20px;
-	}
-
-	.link-download-app .content {
-		padding: 20px;
-	}
-
-	.link-download-app h3 {
-		font-size: 20px;
-	}
-}
-
-@media screen and (max-width: 767.98px) {
-	#app {
-		height: fit-content !important;
-	}
-	.sjbdmap {
-		display: block !important;
-		margin-bottom: 5px;
-	}
-
-	#header .logo {
-		width: 45%;
-		height: 45%;
-	}
-
-	#header {
-		padding: 5px 0;
-	}
-
-	#header .hBox {
-		margin: 0;
-		padding: 0 10px;
-	}
-
-	#header .logo img {
-		width: 130%;
-	}
-
-	#header .hIm02 a,
-	#header .hIm02 a img {
-		width: 80%;
-		border-radius: 35px;
-		background-color: transparent;
-		display: flex;
-        justify-content: flex-end;
-	}
-
-	#container2 {
-		padding-top: 3px;
-	}
-
-	#conts h2 img {
-		width: 345px;
-	}
-
-	#conts .linkUl li span,
-	#conts .linkUl li a {
-		font-size: 12px;
-		padding: 0;
-	}
-
-	#conts .linkUl li a {
-		height: 37px;
-	}
-
-	.link-download-app h3 {
-		font-size: 16px;
-	}
-
-	.link-download-app::before {
-		height: 700%;
-	}
-
-	.link-download-app .content {
-		padding: 10px;
-	}
-
-	#main #conts {
-		padding-top: 20px;
-	}
-
-	.box-btn-redirect {
-		display: grid;
-		align-items: center;
-		grid-template-columns: auto auto;
-	}
-
-	#main-social {
-	        width: 100%;
-        	max-width: 100%;
-        	box-sizing: border-box;
-        /* Giảm padding để phù hợp với di động */
-        	padding: 1px 10px; 
-		
-    	}
-
-	.social-links-container {
-        display: flex; 
-        flex-wrap: wrap;
-        justify-content: space-around; 
-        gap: 0; 
-        padding: 0;
-        margin: 0;
-    }
-    .social-item:nth-child(-n+3) {
-        width: 25%; 
-        flex-basis: auto;
-        padding: 8px 0; 
-        border-width: 0;
-	border: 1px solid #ffffff !important;
-    }
-    .social-item:nth-child(n+4) {
-        width: 25%; 
-        flex-basis: auto;
-        padding: 8px 0; 
-        margin: 0 0 5px 0;
-        border-width: 0;
-	border: 1px solid #ffffff !important;
-    }
-    .social-item img {
-        width: 10px;
-        height: 10px;
-        margin-bottom: 2px; 
-    }
-    
-    .social-item span {
-        font-size: 5px;
-        white-space: wrap; 
-        overflow: visible; 
-        text-overflow: initial; 
-    }
-    .social-item a {
-        padding: 0;
-    }
-}
-	#footer {
-		bottom: 0;
-	}
-
-	#footer p {
-		font-size: 16px;
-	}
-}
-
-
 #containerlow {
     padding: 0 0 0 0;
 }
@@ -866,6 +536,112 @@ ul li {
 	margin-top: 5px;
 }
 
+
+
+
+#footer {
+	display: flex;
+    text-align: center;
+    clear: both;
+    background-color: #ffffff;
+    border-top: 4px solid #2c4cdd;
+    bottom: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: baseline;
+}
+
+
+#footer .fImg {
+	margin-bottom: 0px;
+}
+
+#footer .fImg ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #bc3555;
+	background-color: #8ad0b8;
+}
+
+#footer .fBox {
+	padding: 10px;
+}
+
+#footer .fNavi li {
+	margin: 0 10px;
+	display: inline-block;
+}
+
+#footer .fNavi li a {
+	color: #825c48;
+}
+
+#footer .fNavi li a:hover {
+	color: #ff0;
+}
+
+#footer p {
+	margin-top: 7px;
+	color: #000000;
+	font-size: 18px;
+	line-height: 2.5;
+}
+
+.box-redirect {
+	padding: 0px 13px 0 20px !important;
+}
+
+.link-download-app {
+	padding: 0px;
+	position: relative;
+	overflow: hidden;
+	margin-top: 10px;
+}
+
+.link-download-app .content {
+	position: relative;
+	background-color: #4868f7;
+	padding: 10px;
+	text-align: center;
+	z-index: 2;
+}
+
+.link-download-app,
+.link-download-app .content {
+	border-radius: 10px;
+}
+
+.link-download-app h3 {
+	color: #4868f7;
+	font-size: 16px;
+	white-space: nowrap;
+}
+
+.link-download-app h3:hover {
+	text-shadow: 0 0 2px #ff0;
+}
+
+
+@keyframes animate {
+	from {
+		background-position: 0;
+	}
+
+	to {
+		background-position: 0 450px;
+	}
+}
+
+.box-btn-redirect {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
 @keyframes pulse {
     0% {
         box-shadow: 0 0 0 0 rgba(254, 143, 33, 0.4);
@@ -877,4 +653,213 @@ ul li {
         box-shadow: 0 0 0 0 rgba(254, 143, 33, 0);
     }
 }
+
+
+@media screen and (max-width: 1024px) {
+
+	#main,
+	#header .hBox,
+	#header .hInner,
+	#footer .fBox {
+		max-width: 100%;
+	}
+}
+
+@media screen and (max-width: 1023.98px) {
+
+	html,
+	body {
+		overflow-x: hidden;
+	}
+	
+	#container,
+	#container2,
+	#containerlow,
+	#container-social {
+		width: 100%;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	#main #sideBar h2,
+	.img-download-app {
+		display: none;
+	}
+
+	#main #conts {
+		width: 100%;
+	}
+
+	#main #conts:before {
+		border: none;
+	}
+
+	#header .logo img {
+		width: 250px;
+	}
+
+	#conts .linkUl li {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 10px;
+	}
+
+	#main #sideBar {
+		width: 100%;
+		padding: 0 0 20px;
+	}
+
+	.link-download-app {
+		margin-top: 0;
+		width: 100%;
+	}
+
+	.link-download-app::before {
+		height: 1125%;
+	}
+
+	#header .hInner h1 {
+		font-size: 20px;
+		padding: 10px;
+		text-align: center;
+	}
+
+	#conts .linkUl li span {
+		padding: 7px;
+		font-size: 24px;
+		width: 50%;
+	}
+
+	#conts .linkUl li a {
+		height: 50px;
+		background-size: cover;
+		font-size: 22px;
+	}
+
+	#conts .linkUl li .txt,
+	#conts .linkUl li a {
+		width: 20%;
+	}
+
+	#footer p {
+		font-size: 20px;
+	}
+
+	.link-download-app .content {
+		padding: 20px;
+	}
+
+	.link-download-app h3 {
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 767.98px) {
+	#app {
+		height: fit-content !important;
+	}
+	.sjbdmap {
+		display: block !important;
+		margin-bottom: 5px;
+	}
+
+	#header .logo {
+		width: 45%;
+		height: 45%;
+	}
+
+	#header {
+		padding: 5px 0;
+	}
+
+	#header .hBox {
+		margin: 0;
+		padding: 0 10px;
+	}
+
+	#header .logo img {
+		width: 130%;
+	}
+
+	#header .hIm02 a,
+	#header .hIm02 a img {
+		width: 80%;
+		border-radius: 35px;
+		background-color: transparent;
+		display: flex;
+        justify-content: flex-end;
+	}
+
+	#container2 {
+		padding-top: 3px;
+	}
+
+	#conts h2 img {
+		width: 345px;
+	}
+
+	#conts .linkUl li span,
+	#conts .linkUl li a {
+		font-size: 12px;
+		padding: 0;
+	}
+
+	#conts .linkUl li a {
+		height: 37px;
+	}
+
+	.link-download-app h3 {
+		font-size: 16px;
+	}
+
+	.link-download-app::before {
+		height: 700%;
+	}
+
+	.link-download-app .content {
+		padding: 10px;
+	}
+
+	#main #conts {
+		padding-top: 20px;
+	}
+
+	.box-btn-redirect {
+		display: grid;
+		align-items: center;
+		grid-template-columns: auto auto;
+	}
+
+	#main-social {
+		padding-top: 0;	
+    	}
+
+ 	.social-links-container {
+        display: flex; /* Đảm bảo Flexbox được sử dụng */
+        flex-wrap: wrap; /* Rất quan trọng: cho phép các mục xuống dòng */
+        justify-content: space-around; /* Căn chỉnh các mục trên hàng */
+        gap: 5px; /* Thêm khoảng cách giữa các hàng và cột */
+    }
+
+
+    .social-item img {
+        width: 40px; 
+        height: 40px; 
+        margin-bottom: 5px;
+    }
+
+    .social-item span {
+        font-size: 14px; 
+
+
+#footer {
+		bottom: 0;
+	}
+
+#footer p {
+		font-size: 16px;
+	}
+}
+
 
