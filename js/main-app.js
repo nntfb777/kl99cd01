@@ -32,7 +32,7 @@ var app = new Vue({
             connectTimeout: "hết hạn",
             connectFail: '9ms',
             name: 'okking.com/',
-            kefuUrl: "https://jo1k9iebnb.ssi7gwlj.com/033def1ddbe37c4jkfle-keli38e81cd5e5774f95b58aa2cc447ecae39b93163469fc1d3a9234c6d43fca27db&chatgroup=3",
+            kefuUrl: "https://wtti8pj.xl4gscye.com/chatwindow.aspx?siteId=65002300&planId=88c557f5-5a2c-4ea3-b364-9cda2464fa7b&chatgroup=3",
             apkAppUrl: 'https://99kl.online/DownloadApp/',
             pcUrl: 'https://99kl.online/DownloadApp/',
         },
