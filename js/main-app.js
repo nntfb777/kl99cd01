@@ -28,6 +28,11 @@ var app = new Vue({
                 "https://99kl.plus/",
                 "https://99kl.world/",
                 "https://99kl.pub/",
+                "https://kl99.moda/",
+                "https://kl99.news/",
+                "https://kl99.online/",
+                "https://kl99.org/",
+                "https://kl99.ph/",
         ],
 
             urls: [],
